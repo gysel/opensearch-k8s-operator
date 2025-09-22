@@ -6248,6 +6248,11 @@ spec:
                               a CA and certificates for the cluster to use, if false
                               secrets with existing certificates must be supplied
                             type: boolean
+                          rotateDaysBeforeExpiry:
+                            default: -1
+                            description: Automatically rotate certificates before
+                              they expire, set to -1 to disable
+                            type: integer
                           secret:
                             description: Optional, name of a TLS secret that contains
                               ca.crt, tls.key and tls.crt data. If ca.crt is in a
@@ -6305,6 +6310,11 @@ spec:
                           perNode:
                             description: Configure transport node certificate
                             type: boolean
+                          rotateDaysBeforeExpiry:
+                            default: -1
+                            description: Automatically rotate certificates before
+                              they expire, set to -1 to disable
+                            type: integer
                           secret:
                             description: Optional, name of a TLS secret that contains
                               ca.crt, tls.key and tls.crt data. If ca.crt is in a
